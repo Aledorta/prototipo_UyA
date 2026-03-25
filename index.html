@@ -36,43 +36,45 @@
             <!-- CABECERA -->
             <header class="bg-light p-4 mb-3 text-center">
                 <h1> Taxis Aeropuertos Tenerife </h1>
-                <nav class="nav justify-content-center">
+                <nav class="nav justify-content-center" aria-label="Navegacion principal">
                     <a class="nav-link" href="Practica_5.html""> Inicio </a>
                     <a class="nav-link" href="#"> Vehículos </a>
                     <a class="nav-link" href="#"> Contacto </a>
                 </nav>
             </header>
 
+            <main aria-label="Contenido principal de Taxi Tenerife">
 
             <!-- FILA DE CONTENIDO -->
             <div class="row g-0">
                 <div class="col-12 col-lg-10 order-1 order-lg-1 px-3">
                     <!-- COLUMNA IZQUIERDA -->
-                    <h2> Destinos más populares </h2>
+                    <h2 id="titulo-destinos"> Destinos más populares </h2>
                     <p> Aquí podrás ver los destinos más solicitados desde los aeropuertos: </p>
 
-                    <table class="table table-bordered">
+                    <table class="table table-bordered" aria-labelledby="titulo-destinos">
+                        <caption class="visually-hidden">Tabla de destinos populares desde aeropuertos de Tenerife</caption>
                         <tr>
-                            <td class="text-center"> 
+                            <th class="text-center" scope="col"> 
                                 <p class="fw-bold"> Santa Cruz: </p> 
                                 <img src="https://st3.idealista.com/news/archivos/styles/fullwidth_xl/public/2024-09/images/at_palmetum_de_santa_cruz_de_tenerife_2022_028_2.jpg?VersionId=soJgey0r6gQ_mD8dfyMORDhb4Uk5COy6&h=0a584a5b&itok=_AQLUOjY" 
                                 class="img-fluid rounded destination-img" alt="Santa Cruz"> 
-                            </td>
-                            <td class="text-center"> 
+                            </th>
+                            <th class="text-center" scope="col"> 
                                 <p class="fw-bold"> Puerto de la Cruz: </p> 
                                 <img src="https://sendaecoway.com/wp-content/uploads/2024/10/6197abf017d202925a23e959_turismo-en-puerto-de-la-cruz-1024x627-1.jpg" 
                                 class="img-fluid rounded destination-img" alt="Puerto de la Cruz"> 
-                            </td>
-                            <td class="text-center"> 
+                            </th>
+                            <th class="text-center" scope="col"> 
                                 <p class="fw-bold"> La Laguna: </p> 
                                 <img src="https://lacosmopolilla.com/wp-content/uploads/2017/06/Qu%C3%A9-ver-en-La-Laguna-Tenerife.jpg" 
                                 class="img-fluid rounded destination-img" alt="La Laguna"> 
-                            </td>
-                            <td class="text-center"> 
+                            </th>
+                            <th class="text-center" scope="col"> 
                                 <p class="fw-bold"> Adeje: </p> 
                                 <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fe/cf/adeje.jpg?w=1200&h=700&s=1" 
                                 class="img-fluid rounded destination-img" alt="Adeje"> 
-                            </td>
+                            </th>
                         </tr>
                     </table>
                     <div class="text-center mt-2">
@@ -121,7 +123,7 @@
                     </ul> -->
 
                     <!-- CARRUSEL -->
-                    <div id="carouselExample" class="carousel slide">
+                    <div id="carouselExample" class="carousel slide" role="region" aria-label="Galeria de vehiculos disponibles">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="https://b772872.smushcdn.com/772872/wp-content/uploads/2023/06/Tenerife-Airpot-Taxi-Sedan-by-Welcome-Pickups-scaled.jpeg?lossy=1&strip=1&webp=1" class="d-block w-100 carousel-img" alt="Taxi Tradicional">
@@ -142,11 +144,11 @@
                                 <img src="https://www.chofix.com/img/alquiler-microbus-con-chofer.jpg" class="d-block w-100 carousel-img" alt="Minibus">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" aria-label="Imagen anterior">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" aria-label="Imagen siguiente">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -159,12 +161,12 @@
                 <aside class="col-12 col-lg-2 order-2 order-lg-2 ps-lg-3 pe-lg-0 px-3">
                     <h3> Realizar Reserva </h3>
                     <p> Para poder realizar tu reserva final, pincha en el siguiente enlace: </p>
-                    <a href="formulario_reserva.html"> Formulario reserva </a>
+                    <a href="formulario_reserva.html" aria-label="Ir al formulario de reserva de taxi"> Formulario reserva </a>
                     <br>
                     <br>
                     <h3> Formulario de contacto </h3>
                     <p> Para dudas o consultas, pincha en el siguiente enlace: </p>
-                    <a href="formulario_contacto.html"> Formulario contacto </a>
+                    <a href="formulario_contacto.html" aria-label="Ir al formulario de contacto"> Formulario contacto </a>
                     <br>
                     <br>
                     <h3> Enlaces </h3>
@@ -210,6 +212,7 @@
                     </ul>
                 </aside>
             </div>
+            </main>
 
             <!-- PIE -->
             <footer class="text-center mt-4 p-3 bg-light">
