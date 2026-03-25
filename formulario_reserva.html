@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title> Reserva de taxi </title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container mt-5 mb-5" style="max-width: 800px;">
+
+			<h2 class="mb-4"> Reserva tu taxi </h2>
+
+			<form id="formReserva">
+
+				<div class="mb-3">
+					<label class="form-label"> Nombre completo </label>
+					<input type="text" id="nombre" class="form-control" required>
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label"> Correo electrónico </label>
+					<input type="email" id="email" class="form-control" required>
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label"> Teléfono de contacto </label>
+					<input type="tel" id="telefono" class="form-control" placeholder="Ej: 600123123" required>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<label class="form-label"> Punto de recogida </label>
+						<input type="text" id="origen" class="form-control" placeholder="Aeropuerto Tenerife Sur" required>
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label class="form-label"> Destino </label>
+						<input type="text" id="destino" class="form-control" placeholder="Hotel o dirección" required>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<label class="form-label"> Fecha del servicio </label>
+						<input type="date" id="fecha" class="form-control" required>
+					</div>
+
+					<div class="col-md-6 mb-3">
+						<label class="form-label"> Hora de recogida </label>
+						<input type="time" id="hora" class="form-control" required>
+					</div>
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label"> Número de pasajeros </label>
+					<input type="number" id="pasajeros" class="form-control" min="1" max="20" required>
+				</div>
+
+				<h5> Tipo de vehículo </h5>
+
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="vehiculo" id="tradicional" required>
+					<label class="form-check-label"> Taxi Tradicional (hasta 4 plazas) </label>
+				</div>
+
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="vehiculo" id="furgoneta">
+					<label class="form-check-label"> Taxi Furgoneta (hasta 8 plazas) </label>
+				</div>
+
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="vehiculo" id="lujo">
+					<label class="form-check-label"> Taxi de Lujo </label>
+				</div>
+
+				<div class="form-check mb-3">
+					<input class="form-check-input" type="radio" name="vehiculo" id="minibus">
+					<label class="form-check-label"> Minibus </label>
+				</div>
+
+				<h5> Servicios extra </h5>
+
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" id="sillaInfantil">
+					<label class="form-check-label"> Silla infantil </label>
+				</div>
+
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" id="equipajeExtra">
+					<label class="form-check-label"> Equipaje extra </label>
+				</div>
+
+				<div class="form-check mb-3">
+					<input class="form-check-input" type="checkbox" id="mascota">
+					<label class="form-check-label"> Transporte de mascota </label>
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label"> Código de descuento </label>
+					<input type="text" id="descuento" class="form-control">
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label"> Comentarios adicionales </label>
+					<textarea id="comentarios" class="form-control" rows="3" placeholder="Número de vuelo, puerta de recogida, etc."></textarea>
+				</div>
+
+				<button type="submit" class="btn btn-primary"> Reservar </button>
+				<button type="reset" class="btn btn-secondary"> Limpiar </button>
+
+			</form>
+			
+			<footer class="mt-4 p-3"></footer>
+			<div id="resumen" class="alert"></div>
+			<!-- <script src="script.js"></script> -->
+
+		</div>
+	</body>
+</html>
