@@ -4,225 +4,187 @@
         <meta charset="UTF-8">
         <title> Taxi Tenerife </title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <style>
-            /* body {
-                background-color: #e6f4ff;
-            } */
-
-            /* body {
-                background: linear-gradient(180deg, #eaf6ff 0%, #d8ecff 100%);
-            } */
-
-
-            .destination-img {
-                max-width: 280px;
-            }
-
-            .vehicle-img {
-                max-width: 220px;
-            }
-
-            .carousel-img {
-                width: 100%;
-                height: 500px;
-                object-fit: cover;
-            }
-        </style>
     </head>
 
     <body>
         <div class="container-fluid px-0">
 
             <!-- CABECERA -->
-            <header class="bg-light p-4 mb-3 text-center">
-                <h1> Taxis Aeropuertos Tenerife </h1>
-                <nav class="nav justify-content-center" aria-label="Navegacion principal">
-                    <a class="nav-link" href="Practica_5.html""> Inicio </a>
-                    <a class="nav-link" href="#"> Vehículos </a>
-                    <a class="nav-link" href="#"> Contacto </a>
-                </nav>
-            </header>
+            <header class="bg-primary p-4 mb-3">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-lg-3 d-none d-lg-block"></div>
 
-            <main aria-label="Contenido principal de Taxi Tenerife">
+						<div class="col-12 col-lg-6 text-center">
+							<h1 class="text-white mb-0" data-section="header" data-value="title"> Taxis Aeropuertos Tenerife </h1>
+						</div>
+					
+						<div class="col-12 col-lg-3 text-center text-lg-end mt-3 mt-lg-0 position-relative z-3">
+							<select id="language-select" class="form-select form-select-sm bg-light border-0 shadow-sm" style="width: 110px; cursor: pointer;">
+								<option value="es" selected> ESP </option>
+								<option value="en"> ENG </option>
+							</select>
+            			</div>		
+					</div>
 
-            <!-- FILA DE CONTENIDO -->
-            <div class="row g-0">
-                <div class="col-12 col-lg-10 order-1 order-lg-1 px-3">
-                    <!-- COLUMNA IZQUIERDA -->
-                    <h2 id="titulo-destinos"> Destinos más populares </h2>
-                    <p> Aquí podrás ver los destinos más solicitados desde los aeropuertos: </p>
+					<nav class="nav justify-content-center mt-3" aria-label="Navegacion principal">
+						<a class="nav-link text-white" href="index.html" data-section="nav" data-value="home"> Inicio </a>
+						<a class="nav-link text-white" href="formulario_reserva.html" data-section="nav" data-value="booking"> Realizar Reserva </a>
+						<a class="nav-link text-white" href="formulario_contacto.html" data-section="nav" data-value="contact"> Contacto </a>
+						<a class="nav-link text-white" href="gestion_reserva.html" data-section="nav" data-value="manage"> Gestión Reserva </a>
+					</nav>
+				</div>
+			</header>
 
-                    <table class="table table-bordered" aria-labelledby="titulo-destinos">
-                        <caption class="visually-hidden">Tabla de destinos populares desde aeropuertos de Tenerife</caption>
-                        <tr>
-                            <th class="text-center" scope="col"> 
-                                <p class="fw-bold"> Santa Cruz: </p> 
-                                <img src="https://st3.idealista.com/news/archivos/styles/fullwidth_xl/public/2024-09/images/at_palmetum_de_santa_cruz_de_tenerife_2022_028_2.jpg?VersionId=soJgey0r6gQ_mD8dfyMORDhb4Uk5COy6&h=0a584a5b&itok=_AQLUOjY" 
-                                class="img-fluid rounded destination-img" alt="Santa Cruz"> 
-                            </th>
-                            <th class="text-center" scope="col"> 
-                                <p class="fw-bold"> Puerto de la Cruz: </p> 
-                                <img src="https://sendaecoway.com/wp-content/uploads/2024/10/6197abf017d202925a23e959_turismo-en-puerto-de-la-cruz-1024x627-1.jpg" 
-                                class="img-fluid rounded destination-img" alt="Puerto de la Cruz"> 
-                            </th>
-                            <th class="text-center" scope="col"> 
-                                <p class="fw-bold"> La Laguna: </p> 
-                                <img src="https://lacosmopolilla.com/wp-content/uploads/2017/06/Qu%C3%A9-ver-en-La-Laguna-Tenerife.jpg" 
-                                class="img-fluid rounded destination-img" alt="La Laguna"> 
-                            </th>
-                            <th class="text-center" scope="col"> 
-                                <p class="fw-bold"> Adeje: </p> 
-                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fe/cf/adeje.jpg?w=1200&h=700&s=1" 
-                                class="img-fluid rounded destination-img" alt="Adeje"> 
-                            </th>
-                        </tr>
-                    </table>
-                    <div class="text-center mt-2">
-                        <p> Para ver más ciudades de la isla puede ver este mapa. </p>
-                        <a href="https://www.google.com/maps/search/C/%20Jose%20Hernandez%20Alfonso,%2018-2O%20G.%2038003%20Santa%20Cruz%20De%20Tenerife"> Mapa de Tenerife </a>
-                    </div>
-                    <!-- <br>
-                    <h3> Información adicional </h3>
-                    <p> Todos nuestros conductores son profesionales. Para cualquier pregunta o consulta que tenga respecto a la información proporcionada puede realizarla en <a href="formulario.html"> este formulario. </a> </p>  -->
-                    <hr class="my-4">
+        	<main aria-label="Contenido principal de Taxi Tenerife">
 
-                    <!-- COLUMNA CENTRO -->
-                    <h3> Vehículos disponibles para reservar </h3>
-                    <p> Aquí verás todos los vehiculos que disponemos para reservar. Decida lo que mejor se adapte a su viaje. </p>
-                    <!-- <ul class="list-group">
-                        <li class="list-group-item text-center"> 
-                            <p class="fw-bold"> Taxi Tradicional: </p>
-                            <img src="https://b772872.smushcdn.com/772872/wp-content/uploads/2023/06/Tenerife-Airpot-Taxi-Sedan-by-Welcome-Pickups-scaled.jpeg?lossy=1&strip=1&webp=1" 
-                            class="img-fluid rounded vehicle-img" alt="Taxi Tradicional">
-                        </li>
-                        <li class="list-group-item text-center"> 
-                            <p class="fw-bold"> Taxi Furgoneta: </p>
-                            <img src="http://taxientenerife.com/wp-content/uploads/2022/05/Automo%CC%81viles-Taxi-tenerife.png" 
-                            class="img-fluid rounded vehicle-img" alt="Taxi Furgoneta">
-                        </li>
-                        <li class="list-group-item text-center"> 
-                            <p class="fw-bold"> Taxi Eléctrico: </p>
-                            <img src="https://www.yotaxi.es/wp-content/uploads/2024/01/taxis-electricos-santiago.jpg" 
-                            class="img-fluid rounded vehicle-img" alt="Taxi Eléctrico">
-                        </li>
-                        <li class="list-group-item text-center"> 
-                            <p class="fw-bold"> Taxi de Lujo: </p>
-                            <img src="https://www.italpassion.fr/wp-content/uploads/2025/09/taxi-maserati.jpg" 
-                            class="img-fluid rounded vehicle-img" alt="Taxi de Lujo">
-                        </li>
-                        <li class="list-group-item text-center"> 
-                            <p class="fw-bold"> Bus: </p>
-                            <img src="https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/506530079_1399662927955197_7888023162692010929_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2a1932&_nc_ohc=RcHb-C01bswQ7kNvwELvZG8&_nc_oc=Adllamq6ieKFJyO8MjXtRzGMKXHJ32J-b9f1AWuYQhRWJ6N9TjXzIC7gNofF1p4-GDg&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=8kX-a0As6a59pttelLU4IA&_nc_ss=8&oh=00_AfwwaoK2D8Ay8xlIf_lpLT03QkqX_5UU7WU1R2sjUyFMzQ&oe=69B65B20" 
-                            class="img-fluid rounded vehicle-img" alt="Bus">
-                        </li>
-                        <li class="list-group-item text-center"> 
-                            <p class="fw-bold"> Minibus: </p>
-                            <img src="https://www.chofix.com/img/alquiler-microbus-con-chofer.jpg" 
-                            class="img-fluid rounded vehicle-img" alt="Minibus">
-                        </li>
-                    </ul> -->
+				<!-- FILA DE CONTENIDO -->
+				<div class="row g-0 justify-content-center">
+					<div class="col-12 col-lg-10 order-1 order-lg-1 px-3">
+						<h2 id="titulo-destinos" data-section="main" data-value="destinations_title"> Destinos más populares </h2>
+						<p data-section="main" data-value="destinations_desc"> Aquí podrás ver los destinos más solicitados desde los aeropuertos: </p>
 
-                    <!-- CARRUSEL -->
-                    <div id="carouselExample" class="carousel slide" role="region" aria-label="Galeria de vehiculos disponibles">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://b772872.smushcdn.com/772872/wp-content/uploads/2023/06/Tenerife-Airpot-Taxi-Sedan-by-Welcome-Pickups-scaled.jpeg?lossy=1&strip=1&webp=1" class="d-block w-100 carousel-img" alt="Taxi Tradicional">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="http://taxientenerife.com/wp-content/uploads/2022/05/Automo%CC%81viles-Taxi-tenerife.png" class="d-block w-100 carousel-img" alt="Taxi Furgoneta">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://www.yotaxi.es/wp-content/uploads/2024/01/taxis-electricos-santiago.jpg" class="d-block w-100 carousel-img" alt="Taxi Eléctrico">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://www.italpassion.fr/wp-content/uploads/2025/09/taxi-maserati.jpg" class="d-block w-100 carousel-img" alt="Taxi de Lujo">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/506530079_1399662927955197_7888023162692010929_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2a1932&_nc_ohc=RcHb-C01bswQ7kNvwELvZG8&_nc_oc=Adllamq6ieKFJyO8MjXtRzGMKXHJ32J-b9f1AWuYQhRWJ6N9TjXzIC7gNofF1p4-GDg&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=8kX-a0As6a59pttelLU4IA&_nc_ss=8&oh=00_AfwwaoK2D8Ay8xlIf_lpLT03QkqX_5UU7WU1R2sjUyFMzQ&oe=69B65B20" class="d-block w-100 carousel-img" alt="Bus">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://www.chofix.com/img/alquiler-microbus-con-chofer.jpg" class="d-block w-100 carousel-img" alt="Minibus">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" aria-label="Imagen anterior">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" aria-label="Imagen siguiente">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
+						<table class="table table-bordered" aria-labelledby="titulo-destinos">
+							<caption class="visually-hidden"> Tabla de destinos populares desde aeropuertos de Tenerife </caption>
+							<tr>
+								<th class="text-center" scope="col"> 
+									<p class="fw-bold"> Santa Cruz: </p> 
+									<img src="https://st3.idealista.com/news/archivos/styles/fullwidth_xl/public/2024-09/images/at_palmetum_de_santa_cruz_de_tenerife_2022_028_2.jpg?VersionId=soJgey0r6gQ_mD8dfyMORDhb4Uk5COy6&h=0a584a5b&itok=_AQLUOjY" 
+									class="img-fluid rounded" alt="Santa Cruz"> 
+								</th>
+								<th class="text-center" scope="col"> 
+									<p class="fw-bold"> Puerto de la Cruz: </p> 
+									<img src="https://sendaecoway.com/wp-content/uploads/2024/10/6197abf017d202925a23e959_turismo-en-puerto-de-la-cruz-1024x627-1.jpg" 
+									class="img-fluid rounded" alt="Puerto de la Cruz"> 
+								</th>
+								<th class="text-center" scope="col"> 
+									<p class="fw-bold"> La Laguna: </p> 
+									<img src="https://lacosmopolilla.com/wp-content/uploads/2017/06/Qu%C3%A9-ver-en-La-Laguna-Tenerife.jpg" 
+									class="img-fluid rounded" alt="La Laguna"> 
+								</th>
+								<th class="text-center" scope="col"> 
+									<p class="fw-bold"> Adeje: </p> 
+									<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fe/cf/adeje.jpg?w=1200&h=700&s=1" 
+									class="img-fluid rounded" alt="Adeje"> 
+								</th>
+							</tr>
+						</table>
+						<div class="text-center mt-2">
+							<p data-section="main" data-value="map_text"> Para ver más ciudades de la isla puede ver este mapa. </p>
+							<a href="https://www.google.com/maps/search/C/%20Jose%20Hernandez%20Alfonso,%2018-2O%20G.%2038003%20Santa%20Cruz%20De%20Tenerife" data-section="main" data-value="map_link"> Mapa de Tenerife </a>
+						</div>
+						<!-- <br>
+						<h3> Información adicional </h3>
+						<p> Todos nuestros conductores son profesionales. Para cualquier pregunta o consulta que tenga respecto a la información proporcionada puede realizarla en <a href="formulario.html"> este formulario. </a> </p>  -->
+						<hr class="my-5">
 
+						<!-- COLUMNA CENTRO -->
+						<h3 data-section="main" data-value="vehicles_title"> Vehículos disponibles para reservar </h3>
+						<p data-section="main" data-value="vehicles_desc"> Aquí verás todos los vehiculos que disponemos para reservar. Decida lo que mejor se adapte a su viaje. </p>
 
-                <!-- COLUMNA ENLACES -->
-                <!-- Aside en vez de div para marcar que es contenido relacionado pero no principal. -->
-                <aside class="col-12 col-lg-2 order-2 order-lg-2 ps-lg-3 pe-lg-0 px-3">
-                    <h3> Realizar Reserva </h3>
-                    <p> Para poder realizar tu reserva final, pincha en el siguiente enlace: </p>
-                    <a href="formulario_reserva.html" aria-label="Ir al formulario de reserva de taxi"> Formulario reserva </a>
-                    <br>
-                    <br>
-                    <h3> Formulario de contacto </h3>
-                    <p> Para dudas o consultas, pincha en el siguiente enlace: </p>
-                    <a href="formulario_contacto.html" aria-label="Ir al formulario de contacto"> Formulario contacto </a>
-                    <br>
-                    <br>
-                    <h3> Enlaces </h3>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="https://www.aena.es/es/tenerife-sur.html"> Aeropuerto </a>
-                        </li>
-                        <li>
-                            <a href="https://www.tenerife.travel/"> Turismo Tenerife </a>
-                        </li>
-                        <li>
-                            <a href="https://titsa.com/index.php/tenerife-en-guagua"> Transporte público </a>
-                        </li>
-                    </ul>
-                    <!--
-                    <div class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Dropdown link </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="https://www.aena.es/es/tenerife-sur.html"> Aeropuerto </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="https://www.tenerife.travel/"> Turismo Tenerife </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="https://titsa.com/index.php/tenerife-en-guagua"> Transporte público </a>
-                            </li>
-                        </ul>
-                    </div>
-                    -->
-                    <br>
-                    <h3> Redes Sociales </h3>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="https://www.facebook.com"> Facebook </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com"> Instagram </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com"> Twitter </a>
-                        </li>
-                    </ul>
-                </aside>
-            </div>
+						<!-- CARRUSEL -->
+						<div id="carouselExample" class="carousel slide w-75 mx-auto" role="region" aria-label="Galeria de vehiculos disponibles">
+							<div class="carousel-inner">
+								<div class="carousel-item active ratio ratio-16x9">
+									<img src="https://b772872.smushcdn.com/772872/wp-content/uploads/2023/06/Tenerife-Airpot-Taxi-Sedan-by-Welcome-Pickups-scaled.jpeg?lossy=1&strip=1&webp=1" 
+									class="object-fit-cover rounded" alt="Taxi Tradicional">
+								</div>
+								<div class="carousel-item ratio ratio-16x9">
+									<img src="http://taxientenerife.com/wp-content/uploads/2022/05/Automo%CC%81viles-Taxi-tenerife.png" 
+									class="object-fit-cover rounded" alt="Taxi Furgoneta">
+								</div>
+								<div class="carousel-item ratio ratio-16x9">
+									<img src="https://www.yotaxi.es/wp-content/uploads/2024/01/taxis-electricos-santiago.jpg" 
+									class="object-fit-cover rounded" alt="Taxi Eléctrico">
+								</div>
+								<div class="carousel-item ratio ratio-16x9">
+									<img src="https://www.italpassion.fr/wp-content/uploads/2025/09/taxi-maserati.jpg" 
+									class="object-fit-cover rounded" alt="Taxi de Lujo">
+								</div>
+								<div class="carousel-item ratio ratio-16x9">
+									<img src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-9/46725851_929159917275164_5459325761645182976_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_ohc=5uwqfS9GRAoQ7kNvwERGtml&_nc_oc=AdqREzOqqz09E9ZMKC4dCn-mOIptVH05Uf1VaX2OwwINFDwcM3ZAFqlptHLUigppw_8&_nc_zt=23&_nc_ht=scontent-mad1-1.xx&_nc_gid=o7xvREnT5jBawWQBjEiAmg&_nc_ss=7a32e&oh=00_AfyqrI_PH0oY1b3LrGLPtclLzSYXyOUBpb5tAyk-UsR6pw&oe=69EE65BF"
+									class="object-fit-cover rounded" alt="Bus">
+								</div>
+								<div class="carousel-item ratio ratio-16x9">
+									<img src="https://www.chofix.com/img/alquiler-microbus-con-chofer.jpg" 
+									class="object-fit-cover rounded" alt="Minibus">
+								</div>
+							</div>
+							<button class="carousel-control-prev opacity-100" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" aria-label="Imagen anterior">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden"> Previous </span>
+							</button>
+							<button class="carousel-control-next opacity-100" type="button" data-bs-target="#carouselExample" data-bs-slide="next" aria-label="Imagen siguiente">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden"> Next </span>
+							</button>
+						</div>
+
+						<hr class="my-5">
+
+						<div class="mb-5">
+							<h3 data-section="main" data-value="links_title"> Enlaces relevantes que pueden ser de ayuda </h3>
+							<p data-section="main" data-value="links_desc"> Aquí tienes unos enlaces que te van a poder ayudar más a orientarte mejor en la isla y poder elegir mejor tu destino. </p>
+							<ul>
+								<li>
+								<a href="https://www.aena.es/es/tenerife-sur.html" data-section="main" data-value="link_aena"> Aeropuerto Tenerife Norte </a>
+								</li>
+								<li>
+									<a href="https://www.tenerife.travel/" data-section="main" data-value="link_tourism"> Turismo de la isla de Tenerife </a>
+								</li>
+								<li>
+									<a href="https://www.booking.com/region/es/tenerife-island.es.html?aid=1610834;label=tenerife-island-7Kr7sVq_szGDnRVORTjy5wS349806326154:pl:ta:p1:p2:ac:ap:neg:fi:tikwd-2877717817:lp20295:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YTiRJUvwM0AZDoPI6XBbFtM;ws=&gad_source=1&gad_campaignid=1573114016&gbraid=0AAAAAD_Ls1IWTK5e2KTqzEn-TQnky9enn&gclid=CjwKCAjw-J3OBhBuEiwAwqZ_hx89AOlYDdLdj267WAPAQS7xF2WAL-elVUp3jnjHlYqqtYrXTPdsPBoCeUkQAvD_BwE"
+									data-section="main" data-value="link_hotels"> Hoteles de calidad en Tenerife </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- COLUMNA ENLACES -->
+					<!-- Aside en vez de div para marcar que es contenido relacionado pero no principal.
+					<aside class="col-12 col-lg-2 order-2 order-lg-2 ps-lg-3 pe-lg-0 px-3">
+						<br>
+						<br>
+						<h3> Enlaces de ayuda </h3>
+						<ul class="list-unstyled">
+							<li>
+								<a href="https://www.aena.es/es/tenerife-sur.html"> Aeropuerto </a>
+							</li>
+							<li>
+								<a href="https://www.tenerife.travel/"> Turismo Tenerife </a>
+							</li>
+							<li>
+								<a href="https://titsa.com/index.php/tenerife-en-guagua"> Transporte público </a>
+							</li>
+						</ul>
+						<br>
+						<h3> Redes Sociales </h3>
+						<ul class="list-unstyled">
+							<li>
+								<a href="https://www.facebook.com"> Facebook </a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com"> Instagram </a>
+							</li>
+							<li>
+								<a href="https://twitter.com"> Twitter </a>
+							</li>
+						</ul>
+					</aside>	-->
+				</div>
             </main>
 
-            <!-- PIE -->
-            <footer class="text-center mt-4 p-3 bg-light">
-                <p> Empresa Taxi Tenerife <br>
-                    Tel: 922 000 000 
-                </p>
-            </footer>
-
+			<!-- PIE -->
+			<footer class="text-white text-center mt-4 p-3 bg-primary">
+					<p data-section="footer" data-value="company"> Empresa Taxi Tenerife </p>
+					<p> Tel: 922 000 000 </p> 
+					</p>
+			</footer>
         </div>
-        <!-- Archivo JavaScript de Bootstrap para el carrusel  -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- TODAVIA NO FUNCIONA, PERO DE TODAS FORMAS DEJALO QUE CUANDO PUEDA LO TERMINO -->
+		<script src="traductor.js"></script>
+
+		<!-- Archivo JavaScript de Bootstrap para el carrusel  -->
+    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
