@@ -14,46 +14,46 @@
 			<form id="formReserva">
 
 				<div class="mb-3">
-					<label class="form-label"> Nombre completo </label>
+					<label for="nombre" class="form-label"> Nombre completo </label>
 					<input type="text" id="nombre" class="form-control" required>
 				</div>
 
 				<div class="mb-3">
-					<label class="form-label"> Correo electrónico </label>
+					<label for="email" class="form-label"> Correo electrónico </label>
 					<input type="email" id="email" class="form-control" required>
 				</div>
 
 				<div class="mb-3">
-					<label class="form-label"> Teléfono de contacto </label>
+					<label for="telefono" class="form-label"> Teléfono de contacto </label>
 					<input type="tel" id="telefono" class="form-control" placeholder="Ej: 600123123" required>
 				</div>
 
 				<div class="row">
 					<div class="col-md-6 mb-3">
-						<label class="form-label"> Punto de recogida </label>
+						<label for="origen" class="form-label"> Punto de recogida </label>
 						<input type="text" id="origen" class="form-control" placeholder="Aeropuerto Tenerife Sur" required>
 					</div>
 
 					<div class="col-md-6 mb-3">
-						<label class="form-label"> Destino </label>
+						<label for="destino" class="form-label"> Destino </label>
 						<input type="text" id="destino" class="form-control" placeholder="Hotel o dirección" required>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="col-md-6 mb-3">
-						<label class="form-label"> Fecha del servicio </label>
+						<label for="fecha" class="form-label"> Fecha del servicio </label>
 						<input type="date" id="fecha" class="form-control" required>
 					</div>
 
 					<div class="col-md-6 mb-3">
-						<label class="form-label"> Hora de recogida </label>
+						<label for="hora" class="form-label"> Hora de recogida </label>
 						<input type="time" id="hora" class="form-control" required>
 					</div>
 				</div>
 
 				<div class="mb-3">
-					<label class="form-label"> Número de pasajeros </label>
+					<label for="pasajeros" class="form-label"> Número de pasajeros </label>
 					<input type="number" id="pasajeros" class="form-control" min="1" max="20" required>
 				</div>
 
@@ -61,48 +61,48 @@
 
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="vehiculo" id="tradicional" required>
-					<label class="form-check-label"> Taxi Tradicional (hasta 4 plazas) </label>
+					<label for="tradicional" class="form-check-label"> Taxi Tradicional (hasta 4 plazas) </label>
 				</div>
 
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="vehiculo" id="furgoneta">
-					<label class="form-check-label"> Taxi Furgoneta (hasta 8 plazas) </label>
+					<label for="furgoneta" class="form-check-label"> Taxi Furgoneta (hasta 8 plazas) </label>
 				</div>
 
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="vehiculo" id="lujo">
-					<label class="form-check-label"> Taxi de Lujo </label>
+					<label for="lujo" class="form-check-label"> Taxi de Lujo </label>
 				</div>
 
 				<div class="form-check mb-3">
 					<input class="form-check-input" type="radio" name="vehiculo" id="minibus">
-					<label class="form-check-label"> Minibus </label>
+					<label for="minibus" class="form-check-label"> Minibus </label>
 				</div>
 
 				<h5> Servicios extra </h5>
 
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" id="sillaInfantil">
-					<label class="form-check-label"> Silla infantil </label>
+					<label for="sillaInfantil" class="form-check-label"> Silla infantil </label>
 				</div>
 
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" id="equipajeExtra">
-					<label class="form-check-label"> Equipaje extra </label>
+					<label for="equipajeExtra" class="form-check-label"> Equipaje extra </label>
 				</div>
 
 				<div class="form-check mb-3">
 					<input class="form-check-input" type="checkbox" id="mascota">
-					<label class="form-check-label"> Transporte de mascota </label>
+					<label for="mascota" class="form-check-label"> Transporte de mascota </label>
 				</div>
 
 				<div class="mb-3">
-					<label class="form-label"> Código de descuento </label>
+					<label for="descuento" class="form-label"> Código de descuento </label>
 					<input type="text" id="descuento" class="form-control">
 				</div>
 
 				<div class="mb-3">
-					<label class="form-label"> Comentarios adicionales </label>
+					<label for="comentarios" class="form-label"> Comentarios adicionales </label>
 					<textarea id="comentarios" class="form-control" rows="3" placeholder="Número de vuelo, puerta de recogida, etc."></textarea>
 				</div>
 
@@ -118,5 +118,3 @@
 		</div>
 	</body>
 </html>
-
-				<h5> S
