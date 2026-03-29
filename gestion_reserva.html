@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestion de reserva - Taxi Tenerife</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container mt-5 mb-5" style="max-width: 800px;">
+            <h2 class="mb-3">Gestion de reserva</h2>
+            <p class="text-muted">Introduce tu numero de reserva y tu email para consultar los datos.</p>
+
+            <form id="formGestion" class="row g-3">
+                <div class="col-12 col-md-6">
+                    <label for="numeroReserva" class="form-label">Numero de reserva</label>
+                    <input type="text" class="form-control" id="numeroReserva" placeholder="Ej: RES1234" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="email" class="form-label">Correo electronico</label>
+                    <input type="email" class="form-control" id="email" placeholder="nombre@correo.com" required>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Consultar reserva</button>
+                    <a href="index.html" class="btn btn-outline-secondary ms-2">Volver al inicio</a>
+                </div>
+            </form>
+
+            <!-- Ejemplo de resultado -->
+            <div id="resultadoReserva" class="card mt-4 d-none">
+                <div class="card-body">
+                    <h5 class="card-title">Reserva encontrada</h5>
+                    <p class="mb-1"><strong>Numero:</strong> RES1234</p>
+                    <p class="mb-1"><strong>Titular:</strong> Alejandro</p>
+                    <p class="mb-1"><strong>Recogida:</strong> Aeropuerto Tenerife Sur</p>
+                    <p class="mb-1"><strong>Destino:</strong> Puerto de la Cruz</p>
+                    <p class="mb-1"><strong>Fecha:</strong> 15/04/2026</p>
+                    <p class="mb-1"><strong>Hora:</strong> 18:30</p>
+                    <p class="mb-0"><strong>Vehiculo:</strong> Taxi Furgoneta (8 plazas)</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const formGestion = document.getElementById("formGestion");
+            const resultadoReserva = document.getElementById("resultadoReserva");
+
+            formGestion.addEventListener("submit", function (event) {
+                event.preventDefault();
+                resultadoReserva.classList.remove("d-none");
+            });
+        </script>
+    </body>
+</html>
